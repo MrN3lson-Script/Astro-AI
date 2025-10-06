@@ -1,0 +1,125 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1a1a2e;
+    font-family: Arial, sans-serif;
+    color: #e0e0e0;
+    margin: 0;
+}
+
+.chat-container {
+    width: 350px;
+    height: 500px;
+    background-color: #1f283e;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-header {
+    background-color: #2c3a51;
+    color: #fff;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 2px solid #1a1a2e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.download-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.download-btn:hover {
+    transform: scale(1.1);
+}
+
+.chat-output {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    scroll-behavior: smooth;
+}
+
+.file-upload-container {
+    padding: 10px;
+    border-top: 2px solid #2c3a51;
+    text-align: center;
+}
+
+.file-upload-label {
+    display: inline-block;
+    background-color: #2c3a51;
+    color: #e0e0e0;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.file-upload-label:hover {
+    background-color: #3e4c65;
+}
+
+.file-input {
+    display: none;
+}
+
+#chat-input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background-color: #1a1a2e;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    border-top: 2px solid #2c3a51;
+}
+
+.message {
+    padding: 8px 12px;
+    border-radius: 15px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background-color: #007bff;
+    align-self: flex-end;
+    color: white;
+}
+
+.astro-message {
+    background-color: #444c56;
+    align-self: flex-start;
+    color: #e0e0e0;
+}
+
+@media (max-width: 480px) {
+    .chat-container {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .chat-header, #chat-input {
+        padding: 12px;
+    }
+}
+
